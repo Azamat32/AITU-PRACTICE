@@ -66,7 +66,6 @@ func whoisHandler(w http.ResponseWriter, r *http.Request) {
 	whois.CountryCode = geoLocation.CountryCode
 	whois.Latitude = geoLocation.Latitude
 	whois.Longitude = geoLocation.Longitude
-	fmt.Println(len(whois.Domain))
 	if len(whois.Domain) == 0 {
 		fmt.Fprintln(w, "There is error with domen")
 		http.Redirect(w, r, "/", 200)
